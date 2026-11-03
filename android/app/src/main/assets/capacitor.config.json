@@ -1,0 +1,9 @@
+{
+	"appId": "com.earnlio.app",
+	"appName": "Earnlio",
+	"webDir": "dist",
+	"server": {
+		"url": "https://ais-pre-xznxtpuqsytbddo2obr5km-140342195306.europe-west2.run.app",
+		"cleartext": true
+	}
+}

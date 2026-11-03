@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Earnlio</string>
+    <string name="title_activity_main">Earnlio</string>
+    <string name="package_name">com.earnlio.app</string>
+    <string name="custom_url_scheme">com.earnlio.app</string>
+</resources>

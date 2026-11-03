@@ -1,0 +1,42 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "User Profile",
+      "description": "User profile details and settings",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string", "maxLength": 100 },
+        "email": { "type": "string", "maxLength": 150 },
+        "country": { "type": "string", "maxLength": 100 },
+        "language": { "type": "string", "maxLength": 50 },
+        "currency": { "type": "string", "maxLength": 50 },
+        "avatarUrl": { "type": "string", "maxLength": 5000 },
+        "referralCode": { "type": "string", "maxLength": 50 },
+        "dateJoined": { "type": "string" }
+      },
+      "required": ["name", "email"]
+    },
+    "WalletState": {
+      "title": "Wallet State",
+      "description": "User wallet balance and rewards points",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "balanceUsd": { "type": "number" },
+        "points": { "type": "number" }
+      },
+      "required": ["userId", "balanceUsd", "points"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "UserProfile",
+      "description": "User profile document"
+    },
+    "/wallets/{userId}": {
+      "schema": "WalletState",
+      "description": "User wallet state"
+    }
+  }
+}

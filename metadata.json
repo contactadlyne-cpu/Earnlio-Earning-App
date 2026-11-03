@@ -1,0 +1,6 @@
+{
+  "name": "Earnlio",
+  "description": "Earnlio Android rewards dashboard, payout progress tracker, ways to earn, and wallet app.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

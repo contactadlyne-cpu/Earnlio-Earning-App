@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <rect width="512" height="512" rx="128" fill="#0F3B3A"/>
+  <rect x="128" y="128" width="256" height="256" rx="64" fill="#CBF53C"/>
+  <text x="256" y="320" font-family="'Outfit', 'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="220" fill="#10282A" text-anchor="middle">E</text>
+</svg>

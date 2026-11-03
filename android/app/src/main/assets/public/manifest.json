@@ -1,0 +1,20 @@
+{
+  "id": "/",
+  "name": "Earnlio - Rewards & Earn App",
+  "short_name": "Earnlio",
+  "description": "Earn real cash and points by watching videos, reading articles, eBooks, and completing quick offers.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0F3B3A",
+  "theme_color": "#0F3B3A",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

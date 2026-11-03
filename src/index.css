@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #F4F6F1;
+    color: #10282A;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+/* Custom scrollbars and utility classes */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  touch-action: pan-x;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+}
+
+/* Custom Color Utility Classes matching exact prompt specs */
+.bg-app-bg { background-color: #F4F6F1; }
+.bg-dark-teal { background-color: #0F3B3A; }
+.text-dark-teal { color: #0F3B3A; }
+.bg-lime-accent { background-color: #CBF53C; }
+.text-lime-accent { color: #CBF53C; }
+.bg-teal-link { background-color: #0E7C74; }
+.text-teal-link { color: #0E7C74; }
+.text-primary-dark { color: #10282A; }
+.text-muted-teal { color: #5E7270; }
+
+.bg-tint-teal { background-color: #BFE9E3; }
+.bg-tint-orange { background-color: #FFD9B8; }
+.bg-tint-purple { background-color: #E2DAFF; }
+.bg-tint-lime { background-color: #CBF53C; }
+
+.bg-success-light { background-color: #E3F6DF; }
+.text-success-green { color: #0B6B3A; }
+.text-error-red { color: #B3261E; }
+.bg-error-light { background-color: #FCE8E6; }
