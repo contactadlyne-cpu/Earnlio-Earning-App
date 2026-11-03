@@ -2,40 +2,39 @@
 set -e
 
 echo "=========================================="
-echo "🚀 Earnlio Android APK & AAB Build Script"
+echo "🚀 Earnlio Android APK Build Script"
 echo "=========================================="
 
-# 1. Install Java OpenJDK if not present
+# 1. Install Node Dependencies if node_modules or vite is missing
+if [ ! -d "node_modules" ] || [ ! -f "node_modules/.bin/vite" ]; then
+    echo "📦 Installing npm dependencies (first run in GitHub Codespaces)..."
+    npm install
+fi
+
+# 2. Install Java OpenJDK if not present
 if ! command -v java &> /dev/null; then
-    echo "📦 Installing Java OpenJDK 17..."
+    echo "☕ Installing Java OpenJDK 17..."
     sudo apt-get update -y && sudo apt-get install -y openjdk-17-jdk
 fi
 
-# 2. Build Web Application Assets
+# 3. Build Web Application Assets
 echo "🔨 Building React SPA web dist..."
 npm run build
 
-# 3. Sync Capacitor Android Assets
+# 4. Sync Capacitor Android Assets
 echo "⚡ Syncing Capacitor Android assets..."
 npx cap sync android
 
-# 4. Make gradlew executable
+# 5. Make gradlew executable & build Debug APK
 cd android
 chmod +x gradlew
 
-# 5. Build Debug APK & Release AAB Bundle for Google Play Console
-echo "📱 Building Android Debug APK..."
+echo "📱 Building Android APK for testing..."
 ./gradlew assembleDebug
-
-echo "📦 Building Android Release Bundle (.aab) for Google Play Console..."
-./gradlew bundleRelease
 
 echo "=========================================="
 echo "✅ BUILD COMPLETE!"
 echo "------------------------------------------"
-echo "📂 Debug APK location:"
+echo "📂 Your Test APK file is located at:"
 echo "   android/app/build/outputs/apk/debug/app-debug.apk"
-echo ""
-echo "📂 Google Play Release AAB location:"
-echo "   android/app/build/outputs/bundle/release/app-release.aab"
 echo "=========================================="
